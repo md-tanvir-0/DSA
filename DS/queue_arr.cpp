@@ -125,3 +125,70 @@ int main()
  cout<<ob.frontValue()<<endl;
  return 0;
 }
+///2nd///
+#include<iostream>
+#define size 10
+using namespace std;
+ 
+class Queue
+{
+ int front;
+ int rear;
+ int Q[size];
+ public:
+ Queue()
+ {
+ front = -1;
+ rear = -1;
+ }
+ 
+ void enqueue(int value)
+ {
+ 
+ }
+ 
+ int dequeue()
+ {
+ return 0;
+ }
+ 
+ bool isFull()
+ {
+ return false;
+ }
+ 
+ bool isEmpty()
+ {
+ return false;
+ }
+ 
+ int frontValue()
+ {
+ return 0;
+ }
+ 
+ void printQueue()
+ {
+ 
+ }
+ 
+};
+ 
+int main()
+{
+ Queue ob;
+ ob.enqueue(9);
+ ob.enqueue(6);
+ ob.enqueue(1);
+ ob.enqueue(8);
+ ob.enqueue(5);
+ ob.enqueue(3);
+ ob.printQueue();
+ ob.dequeue();
+ ob.dequeue();
+ ob.printQueue();
+ ob.enqueue(15);
+ ob.printQueue();
+ cout<<ob.frontValue()<<endl;
+ return 0;
+}
