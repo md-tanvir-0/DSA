@@ -10,11 +10,10 @@ int main()
 
     // }
     // cout << ans;
-
+    // int n; 
+    // cin>>n;
     // for (int i=2; i<=n; i++){
-    //     if(i%2==0){
-    //         cout << i << '\n';
-    //     }
+    //     cout<< i++<<'\n';
     // }
     // while(i<=n){
     //     if(i%2==0){
