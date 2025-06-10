@@ -1,3 +1,8 @@
-for(int k=1; k<=space; k++){
-        //     cout<<'1';
-        // }
+#include <iostream>
+using namespace std;
+
+int main(){
+    string name;
+    cin >> name;
+    cout << "Hello, " << name << '\n';
+}
