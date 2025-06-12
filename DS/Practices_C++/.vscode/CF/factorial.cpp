@@ -3,7 +3,17 @@ using namespace std;
 
 int main()
 {
-    long long int x; cin >> x; 
-    long long int sum = x * (x + 1) / 2;
-    cout << sum << '\n';
+    int x; cin >> x;
+    for(int i = 0; i < x; i++)
+    {
+        long long sum = 1;
+        int y;
+        cin >> y;
+        for(int j = 1; j <= y; j++)
+        {
+            sum *= j;
+            
+        }
+        cout << sum << '\n';
+    }
 }
