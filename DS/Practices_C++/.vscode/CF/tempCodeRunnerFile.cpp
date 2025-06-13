@@ -1,16 +1,2 @@
-#include<iostream>
-using namespace std;
 
-int main()
-{
-    int a, b, c, d; cin >> a >> b >> c >> d;
-    if(b >= c)
-    {
-        cout << c << " " << b << '\n';
-    }
-    else
-    {
-        cout << "-1";
-    }
-    return 0;
-}
+        while(y > 0)
