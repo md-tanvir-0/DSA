@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <stack>
 using namespace std;
 
 bool canBreak(string s) {
@@ -9,24 +8,28 @@ bool canBreak(string s) {
     for (int i = 0; i < n; i++) {
         if (s[i] == '(') {
             for (int j = 0; j < n; j++) {
-                if (s[j] == ')' && i != j) {
-                    stack<char> st;
-                    bool isValid = true;
-                    
+                if (s[j] == ')' && i != j) {                   
+                    string remaining = "";
                     for (int k = 0; k < n; k++) {
-                        if (k == i || k == j) continue;
-                        
-                        if (s[k] == '(') {
-                            st.push('(');
-                        } else {
-                            if (st.empty()) {
-                                isValid = false;
-                                break;
-                            }
-                            st.pop();
+                        if (k != i && k != j) {
+                            remaining += s[k];
                         }
                     }
-                    if (!isValid || !st.empty()) {
+                    int balance = 0;
+                    bool isInvalid = false;
+                    
+                    for (char c : remaining) {
+                        if (c == '(') {
+                            balance++;
+                        } else {
+                            balance--;
+                            if (balance < 0) {
+                                isInvalid = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (isInvalid || balance != 0) {
                         return true;
                     }
                 }
@@ -35,6 +38,7 @@ bool canBreak(string s) {
     }
     
     return false;
+}
 
 int main() {
     int t;
